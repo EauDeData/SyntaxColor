@@ -9,7 +9,7 @@ for line in lines:
     print (line) #Per veure com va el proces 
     name=str(line)+'_X.txt'
     file_2=open(name,'w')
-    article=wikipedia.search(line,3)
+    article=wikipedia.search(line,3) #Amb el 3 selecciones la desambigüació
     article=wikipedia.page(article[-1])
     file_2.write(article.content)
     file_2.close()
